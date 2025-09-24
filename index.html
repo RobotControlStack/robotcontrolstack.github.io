@@ -230,7 +230,39 @@
 
   <!-- TODO: show use cases -->
 
-  <!-- TODO: show results -->
+  <!-- TODO: explain results -->
+
+<!-- Results -->
+  <section class="section hero is-small">
+    <div class="container is-max-desktop">
+      <div class="columns is-centered has-text-centered">
+        <div class="column">
+          <div class="hero-body">
+            <h2 class="title is-3">Results</h2>
+            <img src="static/images/bar_plots_combined.svg" alt="Success rate bar plots."
+              width="100%">
+            <div class="content has-text-justified">
+              Fig. 2: Success rate plots of different VLA comparisons.
+                <i>Left:</i>
+                The Pi Zero model fine-tuned on four datasets from different setups.
+                Each fine-tuning dataset contains of less then 150 episodes and each model is evaluated on 50 rollouts.
+                <i>Center:</i> 
+                Different models fine-tuned on 143 episodes on our FR3 setup (real) with a down-sampled frequency of 5Hz and evaluated on the real-world setup and the replicated simulated scene on 30 real-world and 100 simulated rollouts.
+                <i>Bottom:</i>
+                Different data mixes of synthetic and real data evaluated on the real-world setup and the simulated scene on 30 real-world and 100 simulated rollouts.
+                The number denotes the amount of episodes from the respective domain used in the training mix.
+            </div>
+            <img src="static/images/success_rate_sim_real.svg" alt="Success rate plot over training checkpoints."
+              width="100%">
+            <div class="content has-text-justified">
+              Fig. 3: Evaluation success rates measured for each checkpoint throughout the training process in the real and replicated simulated domain. Each checkpoint is evaluated on 20 real and 100 simulated rollouts. Left: Trained on 143 episodes on our FR3 dataset. Right: Trained on a mix of 143 episodes from our FR3 dataset and 500 episodes from the scripted dataset of the replicated simulated domain.
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+<!-- End Results -->
 
 
 
