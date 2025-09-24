@@ -125,7 +125,7 @@
 
                 <!-- Github link -->
                 <span class="link-block">
-                  <a href="https://github.com/RobotControlStack/rcs" target="_blank"
+                  <a href="https://github.com/RobotControlStack/robot-control-stack" target="_blank"
                     class="external-link button is-normal is-rounded is-dark">
                     <span class="icon">
                       <i class="fab fa-github"></i>
@@ -144,15 +144,15 @@
                   </a>
                 </span>
                 <!-- Model Link. -->
-                <!-- <span class="link-block">
-                  <a href="https://huggingface.co/Juelg"
+                <span class="link-block">
+                  <a href="https://huggingface.co/RobotControlStack"
                     class="external-link button is-normal is-rounded is-dark">
                     <span class="icon">
                       <img src="static/images/hf_icon.svg" />
                     </span>
-                    <span>Models & Dataset</span>
+                    <span>TBA</span>
                   </a>
-                </span> -->
+                </span>
               </div>
             </div>
           </div>
@@ -163,16 +163,19 @@
 
 
   <!-- Teaser video-->
-  <!-- <section class="hero teaser">
-    <div class="container is-max-desktop">
-      <div class="hero-body">
-        <img src="static/images/RCS_Architecture.svg" alt="RCS Architecture" width="100%" />
-        <h2 class="subtitle has-text-centered">
-          <br>...
-        </h2>
-      </div>
+  <section class="hero teaser">
+  <div class="container is-max-desktop">
+    <div class="hero-body">
+      <video poster="" id="tree" autoplay muted loop height="100%" preload="metadata">
+        <source src="static/videos/final_edit.mp4" type="video/mp4">
+      </video>
+      <h2 class="subtitle has-text-centered">
+        <!-- RCS: A lightweight layered architecture integrates core tools from robotics and exposes them through a Gymnasium-based API that enables seamless switching between simulation and real-world experiments.
+        The individual layers can be easily customized in both Python and C++, making RCS equally suitable for end-to-end policy learning and low-level controller design. -->
+      </h2>
     </div>
-  </section> -->
+  </div>
+  </section>
   <!-- End teaser video -->
 
   <!-- Paper abstract -->
@@ -198,15 +201,36 @@
       </div>
     </div>
   </section>
-  <section class="section hero">
-    <div class="columns is-centered has-text centered">
-      <video autoplay loop muted playsinline width="640" height="360">
-        <source src="static/videos/final_edit.mp4" type="video/mp4">
-        Your browser does not support the video tag.
-      </video>
+  <!-- End paper abstract -->
+
+<!-- existing frameworks often dont combine the learning part with the robot part or are hard to setup -->
+
+<!-- Arch -->
+  <section class="section hero is-small">
+    <div class="container is-max-desktop">
+      <div class="columns is-centered has-text-centered">
+        <div class="column">
+          <div class="hero-body">
+            <h2 class="title is-3">Architecture</h2>
+            <img src="static/images/rcs_architecture.svg" alt="RCS Architecture."
+              width="100%">
+            <div class="content has-text-justified">
+              Fig. 1: The applications on the left side interface with the environment on the right side, which can be a simulation or a real robot, through the Gymnasium interface. Sensors, actuators, and data observers wrap the environment by mutating the action, and/or the observation space.<br>
+            </div>
+          </div>
+        </div>
+      </div>
     </div>
   </section>
-  <!-- End paper abstract -->
+<!-- End Arch -->
+
+  <!-- TODO: explain architecture -->
+
+  <!-- TODO: integrated hardware -->
+
+  <!-- TODO: show use cases -->
+
+  <!-- TODO: show results -->
 
 
 
