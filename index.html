@@ -140,7 +140,7 @@
                     <span class="icon">
                       <i class="fas fa-book"></i>
                     </span>
-                    <span>Doc</span>
+                    <span>Docs</span>
                   </a>
                 </span>
                 <!-- Model Link. -->
@@ -166,8 +166,8 @@
   <section class="hero teaser">
   <div class="container is-max-desktop">
     <div class="hero-body">
-      <video poster="" id="tree" autoplay muted loop height="100%" preload="metadata">
-        <source src="static/videos/final_edit.mp4" type="video/mp4">
+      <video id="tree" autoplay muted loop height="100%" preload="metadata">
+        <source src="static/videos/grid.mp4" type="video/mp4">
       </video>
       <h2 class="subtitle has-text-centered">
         <!-- RCS: A lightweight layered architecture integrates core tools from robotics and exposes them through a Gymnasium-based API that enables seamless switching between simulation and real-world experiments.
@@ -175,7 +175,6 @@
       </h2>
     </div>
   </div>
-  </section>
   <!-- End teaser video -->
 
   <!-- Paper abstract -->
@@ -203,6 +202,23 @@
   </section>
   <!-- End paper abstract -->
 
+<!-- 3-MIN VIDEO -->
+<section class="section" id="video-3min">
+  <div class="container is-max-desktop">
+    <h2 class="title is-3 has-text-centered">RCS in 3 Minutes</h2>
+    <div class="columns is-centered">
+      <div class="column is-10">
+        <div class="video-container" style="position:relative;padding-bottom:56.25%;height:0;overflow:hidden;border-radius:12px;box-shadow:0 10px 30px rgba(0,0,0,0.1)">
+          <!-- Replace source with your exported narration video -->
+          <video controls preload="metadata" style="position:absolute;top:0;left:0;width:100%;height:100%">
+            <source src="static/videos/rcs_3min_overview.mp4" type="video/mp4">
+          </video>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
 <!-- existing frameworks often dont combine the learning part with the robot part or are hard to setup -->
 
 <!-- Arch -->
@@ -215,7 +231,7 @@
             <img src="static/images/rcs_architecture_small.svg" alt="RCS Architecture."
               width="100%">
             <div class="content has-text-justified">
-              Fig. 1: The applications on the left side interface with the environment on the right side, which can be a simulation or a real robot, through the Gymnasium interface. Sensors, actuators, and data observers wrap the environment by mutating the action, and/or the observation space.<br>
+              Applications (teleoperation, RL, VLA) interface with the environment (sim or real) through a unified Gymnasium API. Sensors, actuators, and observers wrap the environment, mutating action/observation spaces.
             </div>
           </div>
         </div>
@@ -226,11 +242,61 @@
 
   <!-- TODO: explain architecture -->
 
-  <!-- TODO: integrated hardware -->
 
-  <!-- TODO: show use cases -->
 
-  <!-- TODO: explain results -->
+<!-- Setups and twins -->
+<section class="section">
+  <div class="container is-max-desktop">
+    <h2 class="title is-3 has-text-centered">Robots Setups with Digital Twins</h2>
+
+    <style>
+      /* minimal CSS */
+      #setup-carousel { overflow: hidden; }              /* prevents peeking slides */
+      #setup-carousel .caption {                         /* move caption below dots */
+        margin-top: 0.5rem;
+        margin-bottom: 2.75rem; /* adjust if your dots are taller/shorter */
+      }
+    </style>
+    <div id="setup-carousel" class="carousel">
+      <div class="item-1 has-text-centered">
+        <div style="display:grid;grid-template-columns:1fr 1fr;gap:.5rem;align-items:start;justify-items:center;">
+          <img src="static/images/robots/fr3_setup.jpg" alt="FR3 physical setup" style="max-width:100%;height:auto;max-height:220px;border-radius:6px;">
+          <img src="static/images/robots/fr3_twin.png"  alt="FR3 digital twin"  style="max-width:100%;height:auto;max-height:220px;border-radius:6px;">
+        </div>
+        <p class="is-size-6 caption"><strong>FR3</strong> + Franka Hand; wrist &amp; side cameras.</p>
+      </div>
+
+      <div class="item-2 has-text-centered">
+        <div style="display:grid;grid-template-columns:1fr 1fr;gap:.5rem;align-items:start;justify-items:center;">
+          <img src="static/images/robots/xarm7_setup.jpg" alt="xArm7 physical setup" style="max-width:100%;height:auto;max-height:220px;border-radius:6px;">
+          <img src="static/images/robots/xarm7_twin.png"  alt="xArm7 digital twin"  style="max-width:100%;height:auto;max-height:220px;border-radius:6px;">
+        </div>
+        <p class="is-size-6 caption"><strong>xArm7</strong> + Tilburg Hand; side camera.</p>
+      </div>
+
+      <div class="item-3 has-text-centered">
+        <div style="display:grid;grid-template-columns:1fr 1fr;gap:.5rem;align-items:start;justify-items:center;">
+          <img src="static/images/robots/ur5e_setup.jpg" alt="UR5e physical setup" style="max-width:100%;height:auto;max-height:220px;border-radius:6px;">
+          <img src="static/images/robots/ur5e_twin.png"  alt="UR5e digital twin"  style="max-width:100%;height:auto;max-height:220px;border-radius:6px;">
+        </div>
+        <p class="is-size-6 caption"><strong>UR5e</strong> + Robotiq 2F-85; wrist &amp; overhead cameras.</p>
+      </div>
+
+      <div class="item-4 has-text-centered">
+        <div style="display:grid;grid-template-columns:1fr 1fr;gap:.5rem;align-items:start;justify-items:center;">
+          <img src="static/images/robots/so101_setup.jpg" alt="SO101 physical setup" style="max-width:100%;height:auto;max-height:220px;border-radius:6px;">
+          <img src="static/images/robots/so101_twin.png"  alt="SO101 digital twin"  style="max-width:100%;height:auto;max-height:220px;border-radius:6px;">
+        </div>
+        <p class="is-size-6 caption"><strong>SO101</strong> + built-in gripper; wrist &amp; side cameras.</p>
+      </div>
+    </div>
+  </div>
+</section>
+<!-- End setups and twins -->
+
+<!-- TODO: Applications -->
+
+<!-- TODO: explain results -->
 
 <!-- Results -->
   <section class="section hero is-small">
@@ -294,6 +360,23 @@
       </div>
     </div>
   </footer>
+
+<!-- Default Statcounter code for Robot Control Stack https://robotcontrolstack.github.io/ -->
+<script type="text/javascript">
+var sc_project=13169805; 
+var sc_invisible=1; 
+var sc_security="64083f10"; 
+</script>
+<script type="text/javascript"
+src="https://www.statcounter.com/counter/counter.js"
+async></script>
+<noscript><div class="statcounter"><a title="free hit
+counter" href="https://statcounter.com/"
+target="_blank"><img class="statcounter"
+src="https://c.statcounter.com/13169805/0/64083f10/1/"
+alt="free hit counter"
+referrerPolicy="no-referrer-when-downgrade"></a></div></noscript>
+<!-- End of Statcounter Code -->
 
 </body>
 
