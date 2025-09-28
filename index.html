@@ -10,9 +10,9 @@
   <meta property="og:description" content="A Lean Ecosystem for Robot Learning at Scale" />
   <meta property="og:url" content="https://robotcontrolstack.github.io/" />
   <!-- Path to banner image, should be in the path listed below. Optimal dimenssions are 1200X630-->
-  <!-- <meta property="og:image" content="static/image/your_banner_image.png" />
+  <meta property="og:image" content="static/images/rcs_architecture_small.svg" />
   <meta property="og:image:width" content="1200"/>
-  <meta property="og:image:height" content="630"/> -->
+  <meta property="og:image:height" content="630"/>
 
 
   <!-- <meta name="twitter:title" content="TWITTER BANNER TITLE META TAG">
@@ -295,8 +295,20 @@
 <!-- End setups and twins -->
 
 <!-- TODO: Applications -->
+  <section class="section hero is-small">
+    <div class="container is-max-desktop">
+      <div class="columns is-centered has-text-centered">
+        <div class="column">
+          <div class="hero-body">
+            <h2 class="title is-3">Applications</h2>
+            TODO: similar to app slide in video
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+<!-- End Applications -->
 
-<!-- TODO: explain results -->
 
 <!-- Results -->
   <section class="section hero is-small">
@@ -305,7 +317,7 @@
         <div class="column">
           <div class="hero-body">
             <h2 class="title is-3">Results</h2>
-            <img src="static/images/bar_plots_combined.svg" alt="Success rate bar plots."
+            <img src="static/images/results/bar_plots_combined.svg" alt="Success rate bar plots."
               width="100%">
             <div class="content has-text-justified">
               Fig. 2: Success rate plots of different VLA comparisons.
@@ -318,7 +330,7 @@
                 Different data mixes of synthetic and real data evaluated on the real-world setup and the simulated scene on 30 real-world and 100 simulated rollouts.
                 The number denotes the amount of episodes from the respective domain used in the training mix.
             </div>
-            <img src="static/images/success_rate_sim_real.svg" alt="Success rate plot over training checkpoints."
+            <img src="static/images/results/success_rate_sim_real.svg" alt="Success rate plot over training checkpoints."
               width="100%">
             <div class="content has-text-justified">
               Fig. 3: Evaluation success rates measured for each checkpoint throughout the training process in the real and replicated simulated domain. Each checkpoint is evaluated on 20 real and 100 simulated rollouts. Left: Trained on 143 episodes on our FR3 dataset. Right: Trained on a mix of 143 episodes from our FR3 dataset and 500 episodes from the scripted dataset of the replicated simulated domain.
@@ -328,6 +340,7 @@
       </div>
     </div>
   </section>
+<!-- TODO: explain results -->
 <!-- End Results -->
 
 
