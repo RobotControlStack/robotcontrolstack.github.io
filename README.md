@@ -1,5 +1,5 @@
 # Robot Control Stack: A Lean Ecosystem for Robot Learning at Scale
-
+This repo contains the source code for the project website of the RCS paper located at [robotcontrolstack.github.io](https://robotcontrolstack.github.io/).
 
 If you find RCS useful for your work, please consider citing it:
 ```
