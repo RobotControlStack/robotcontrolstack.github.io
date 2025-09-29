@@ -1,191 +1,185 @@
 <!DOCTYPE html>
 <html>
-
-<head>
-  <meta charset="utf-8">
-  <!-- Meta tags for social media banners, these should be filled in appropriatly as they are your "business card" -->
-  <!-- Replace the content tag with appropriate information -->
-  <meta name="description" content="A Lean Ecosystem for Robot Learning at Scale">
-  <meta property="og:title" content="Robot Control Stack: A Lean Ecosystem for Robot Learning at Scale" />
-  <meta property="og:description" content="A Lean Ecosystem for Robot Learning at Scale" />
-  <meta property="og:url" content="https://robotcontrolstack.github.io/" />
-  <!-- Path to banner image, should be in the path listed below. Optimal dimenssions are 1200X630-->
-  <!-- <meta property="og:image" content="static/image/your_banner_image.png" />
-  <meta property="og:image:width" content="1200"/>
-  <meta property="og:image:height" content="630"/> -->
-
-
-  <!-- <meta name="twitter:title" content="TWITTER BANNER TITLE META TAG">
-  <meta name="twitter:description" content="TWITTER BANNER DESCRIPTION META TAG"> -->
-  <!-- Path to banner image, should be in the path listed below. Optimal dimenssions are 1200X600-->
-  <!-- <meta name="twitter:image" content="static/images/your_twitter_banner_image.png">
-  <meta name="twitter:card" content="summary_large_image"> -->
-  <!-- Keywords for your paper to be indexed by-->
-  <meta name="keywords" content="RCS">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <head>
+    <meta charset="utf-8">
+    <!-- Meta tags for social media banners, these should be filled in appropriatly as they are your "business card" -->
+    <!-- Replace the content tag with appropriate information -->
+    <meta name="description" content="A Lean Ecosystem for Robot Learning at Scale">
+    <meta property="og:title" content="Robot Control Stack: A Lean Ecosystem for Robot Learning at Scale" />
+    <meta property="og:description" content="A Lean Ecosystem for Robot Learning at Scale" />
+    <meta property="og:url" content="https://robotcontrolstack.github.io/" />
+    <!-- Path to banner image, should be in the path listed below. Optimal dimenssions are 1200X630-->
+    <!-- <meta property="og:image" content="static/image/your_banner_image.png" />
+      <meta property="og:image:width" content="1200"/>
+      <meta property="og:image:height" content="630"/> -->
 
 
-  <title>Robot Control Stack</title>
-  <link rel="icon" type="image/x-icon" href="static/images/favicon.ico">
-  <link href="https://fonts.googleapis.com/css?family=Google+Sans|Noto+Sans|Castoro" rel="stylesheet">
+      <!-- <meta name="twitter:title" content="TWITTER BANNER TITLE META TAG">
+        <meta name="twitter:description" content="TWITTER BANNER DESCRIPTION META TAG"> -->
+        <!-- Path to banner image, should be in the path listed below. Optimal dimenssions are 1200X600-->
+        <!-- <meta name="twitter:image" content="static/images/your_twitter_banner_image.png">
+          <meta name="twitter:card" content="summary_large_image"> -->
+          <!-- Keywords for your paper to be indexed by-->
+          <meta name="keywords" content="RCS">
+          <meta name="viewport" content="width=device-width, initial-scale=1">
 
-  <link rel="stylesheet" href="static/css/bulma.min.css">
-  <link rel="stylesheet" href="static/css/bulma-carousel.min.css">
-  <link rel="stylesheet" href="static/css/bulma-slider.min.css">
-  <link rel="stylesheet" href="static/css/fontawesome.all.min.css">
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css">
-  <link rel="stylesheet" href="static/css/index.css">
+          <title>Robot Control Stack</title>
+          <link rel="icon" type="image/x-icon" href="static/images/favicon.ico">
+          <link href="https://fonts.googleapis.com/css?family=Google+Sans|Noto+Sans|Castoro" rel="stylesheet">
 
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-  <script src="https://documentcloud.adobe.com/view-sdk/main.js"></script>
-  <script defer src="static/js/fontawesome.all.min.js"></script>
-  <script src="static/js/bulma-carousel.min.js"></script>
-  <script src="static/js/bulma-slider.min.js"></script>
-  <script src="static/js/index.js"></script>
-</head>
+          <link rel="stylesheet" href="static/css/bulma.min.css">
+          <link rel="stylesheet" href="static/css/bulma-carousel.min.css">
+          <link rel="stylesheet" href="static/css/bulma-slider.min.css">
+          <link rel="stylesheet" href="static/css/fontawesome.all.min.css">
+          <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css">
+          <link rel="stylesheet" href="static/css/index.css">
 
-<body>
-
-
-  <section class="hero">
-    <div class="hero-body">
-      <div class="container is-max-desktop">
-        <div class="columns is-centered">
-          <div class="column has-text-centered">
-            <h1 class="title">
-              <img src="static/images/rcs_logo_line.svg" alt="Project Logo" style="height: 80px; vertical-align: middle;">
-              <br><br>A Lean Ecosystem for Robot Learning at Scale
-            </h1>
-            <div class="is-size-5 publication-authors">
-              <!-- Paper authors -->
-              <span class="author-block">
-                Tobias Jülg<sup>*1</sup>,</span>
-              <span class="author-block">
-                Pierre Krack<sup>*1</sup>,</span>
-              <span class="author-block">
-                Seongjin Bien<sup>*1</sup>,</span>
-              <span class="author-block">
-                Yannik Blei<sup>1</sup>,</span>
-              <span class="author-block">
-                Khaled Gamal<sup>1</sup>,</span>
-              <span class="author-block">
-                Ken Nakahara<sup>2</sup>,</span>
-              <span class="author-block">
-                Johannes Hechtl<sup>3</sup>,</span>
-              <span class="author-block">
-                Roberto Calandra<sup>2</sup>,</span>
-              <span class="author-block">
-                Wolfram Burgard<sup>1</sup> and </span>
-              <span class="author-block">
-                Florian Walter<sup>1,4</sup></span>
-            </div>
-
-            <div class="is-size-5 publication-authors">
-              <span class="author-block"><br><sup>1</sup>University of Technology Nuremberg,</span>
-              <span class="author-block"><sup>2</sup>TU Dresden,</span>
-              <span class="author-block"><sup>3</sup>Siemens AG,</span>
-              <span class="author-block"><sup>4</sup>Technical University of Munich</span>
-              <span class="eql-cntrb"><small><br><sup>*</sup>Equal Contribution</small></span>
-            </div>
-
+          <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+          <script src="https://documentcloud.adobe.com/view-sdk/main.js"></script>
+          <script defer src="static/js/fontawesome.all.min.js"></script>
+          <script src="static/js/bulma-carousel.min.js"></script>
+          <script src="static/js/bulma-slider.min.js"></script>
+          <script src="static/js/index.js"></script>
+  </head>
+  <body>
+    <section class="hero">
+      <div class="hero-body">
+        <div class="container is-max-desktop">
+          <div class="columns is-centered">
             <div class="column has-text-centered">
-              <div class="publication-links">
-                <!-- ArXiv abstract Link -->
-                <span class="link-block">
-                  <a href="https://arxiv.org/abs/2509.14932" target="_blank"
-                    class="external-link button is-normal is-rounded is-dark">
-                    <span class="icon">
-                      <i class="ai ai-arxiv"></i>
-                    </span>
-                    <span>arXiv</span>
-                  </a>
-                </span>
-                <!-- Arxiv PDF link -->
-                <span class="link-block">
-                  <a href="https://arxiv.org/pdf/2509.14932" target="_blank"
-                    class="external-link button is-normal is-rounded is-dark">
-                    <span class="icon">
-                      <i class="fas fa-file-pdf"></i>
-                    </span>
-                    <span>PDF</span>
-                  </a>
-                </span>
+              <h1 class="title">
+                <img src="static/images/rcs_logo_line.svg" alt="Project Logo" style="height: 80px; vertical-align: middle;">
+                <br><br>A Lean Ecosystem for Robot Learning at Scale
+              </h1>
+              <div class="is-size-5 publication-authors">
+                <!-- Paper authors -->
+                <span class="author-block">
+                  Tobias Jülg<sup>*1</sup>,</span>
+                <span class="author-block">
+                  Pierre Krack<sup>*1</sup>,</span>
+                <span class="author-block">
+                  Seongjin Bien<sup>*1</sup>,</span>
+                <span class="author-block">
+                  Yannik Blei<sup>1</sup>,</span>
+                <span class="author-block">
+                  Khaled Gamal<sup>1</sup>,</span>
+                <span class="author-block">
+                  Ken Nakahara<sup>2</sup>,</span>
+                <span class="author-block">
+                  Johannes Hechtl<sup>3</sup>,</span>
+                <span class="author-block">
+                  Roberto Calandra<sup>2</sup>,</span>
+                <span class="author-block">
+                  Wolfram Burgard<sup>1</sup> and </span>
+                <span class="author-block">
+                  Florian Walter<sup>1,4</sup></span>
+              </div>
+              <div class="is-size-5 publication-authors">
+                <span class="author-block"><br><sup>1</sup>University of Technology Nuremberg,</span>
+                <span class="author-block"><sup>2</sup>TU Dresden,</span>
+                <span class="author-block"><sup>3</sup>Siemens AG,</span>
+                <span class="author-block"><sup>4</sup>Technical University of Munich</span>
+                <span class="eql-cntrb"><small><br><sup>*</sup>Equal Contribution</small></span>
+              </div>
+
+              <div class="column has-text-centered">
+                <div class="publication-links">
+                  <!-- ArXiv abstract Link -->
+                  <span class="link-block">
+                    <a href="https://arxiv.org/abs/2509.14932" target="_blank"
+                                                               class="external-link button is-normal is-rounded is-dark">
+                      <span class="icon">
+                        <i class="ai ai-arxiv"></i>
+                      </span>
+                      <span>arXiv</span>
+                    </a>
+                  </span>
+                  <!-- Arxiv PDF link -->
+                  <span class="link-block">
+                    <a href="https://arxiv.org/pdf/2509.14932" target="_blank"
+                                                               class="external-link button is-normal is-rounded is-dark">
+                      <span class="icon">
+                        <i class="fas fa-file-pdf"></i>
+                      </span>
+                      <span>PDF</span>
+                    </a>
+                  </span>
 
 
-                <!-- Supplementary PDF link -->
-                <!-- <span class="link-block">
-                  <a href="static/pdfs/supplementary_material.pdf" target="_blank"
+                  <!-- Supplementary PDF link -->
+                  <!-- <span class="link-block">
+                    <a href="static/pdfs/supplementary_material.pdf" target="_blank"
                     class="external-link button is-normal is-rounded is-dark">
                     <span class="icon">
-                      <i class="fas fa-file-pdf"></i>
+                    <i class="fas fa-file-pdf"></i>
                     </span>
                     <span>Supplementary</span>
-                  </a>
-                </span> -->
+                    </a>
+                    </span> -->
 
-                <!-- Github link -->
-                <span class="link-block">
-                  <a href="https://github.com/RobotControlStack/robot-control-stack" target="_blank"
-                    class="external-link button is-normal is-rounded is-dark">
-                    <span class="icon">
-                      <i class="fab fa-github"></i>
+                    <!-- Github link -->
+                    <span class="link-block">
+                      <a href="https://github.com/RobotControlStack/robot-control-stack" target="_blank"
+                                                                                         class="external-link button is-normal is-rounded is-dark">
+                        <span class="icon">
+                          <i class="fab fa-github"></i>
+                        </span>
+                        <span>Code</span>
+                      </a>
                     </span>
-                    <span>Code</span>
-                  </a>
-                </span>
-                <!-- Doc link -->
-                <span class="link-block">
-                  <a href="https://robot-control-stack.org" target="_blank"
-                    class="external-link button is-normal is-rounded is-dark">
-                    <span class="icon">
-                      <i class="fas fa-book"></i>
+                    <!-- Doc link -->
+                    <span class="link-block">
+                      <a href="https://robot-control-stack.org" target="_blank"
+                                                                class="external-link button is-normal is-rounded is-dark">
+                        <span class="icon">
+                          <i class="fas fa-book"></i>
+                        </span>
+                        <span>Doc</span>
+                      </a>
                     </span>
-                    <span>Doc</span>
-                  </a>
-                </span>
-                <!-- Model Link. -->
-                <span class="link-block">
-                  <a href="https://huggingface.co/RobotControlStack"
-                    class="external-link button is-normal is-rounded is-dark">
-                    <span class="icon">
-                      <img src="static/images/hf_icon.svg" />
+                    <!-- Model Link. -->
+                    <span class="link-block">
+                      <a href="https://huggingface.co/RobotControlStack"
+                         class="external-link button is-normal is-rounded is-dark">
+                        <span class="icon">
+                          <img src="static/images/hf_icon.svg" />
+                        </span>
+                        <span>TBA</span>
+                      </a>
                     </span>
-                    <span>TBA</span>
-                  </a>
-                </span>
+                </div>
               </div>
             </div>
           </div>
         </div>
       </div>
-    </div>
-  </section>
+    </section>
 
 
-  <!-- Teaser video-->
-  <section class="hero teaser">
-  <div class="container is-max-desktop">
-    <div class="hero-body">
-      <video poster="" id="tree" autoplay muted loop height="100%" preload="metadata">
-        <source src="static/videos/final_edit.mp4" type="video/mp4">
-      </video>
-      <h2 class="subtitle has-text-centered">
-        <!-- RCS: A lightweight layered architecture integrates core tools from robotics and exposes them through a Gymnasium-based API that enables seamless switching between simulation and real-world experiments.
-        The individual layers can be easily customized in both Python and C++, making RCS equally suitable for end-to-end policy learning and low-level controller design. -->
-      </h2>
-    </div>
-  </div>
-  </section>
-  <!-- End teaser video -->
+    <!-- Teaser video-->
+    <section class="hero teaser">
+      <div class="container is-max-desktop">
+        <div class="hero-body">
+          <video poster="" id="tree" autoplay muted loop height="100%" preload="metadata">
+            <source src="static/videos/final_edit.mp4" type="video/mp4">
+          </video>
+          <h2 class="subtitle has-text-centered">
+            <!-- RCS: A lightweight layered architecture integrates core tools from robotics and exposes them through a Gymnasium-based API that enables seamless switching between simulation and real-world experiments.
+              The individual layers can be easily customized in both Python and C++, making RCS equally suitable for end-to-end policy learning and low-level controller design. -->
+          </h2>
+        </div>
+      </div>
+    </section>
+    <!-- End teaser video -->
 
-  <!-- Paper abstract -->
-  <section class="section hero is-light">
-    <div class="container is-max-desktop">
-      <div class="columns is-centered has-text-centered">
-        <div class="column is-four-fifths">
-          <h2 class="title is-3">Abstract</h2>
-          <div class="content has-text-justified">
-            <p>
+    <!-- Paper abstract -->
+    <section class="section hero is-light">
+      <div class="container is-max-desktop">
+        <div class="columns is-centered has-text-centered">
+          <div class="column is-four-fifths">
+            <h2 class="title is-3">Abstract</h2>
+            <div class="content has-text-justified">
+              <p>
               Vision-Language-Action models (VLAs) mark a major shift in robot learning.
               They replace specialized architectures and task-tailored components of expert policies with large-scale data collection and setup-specific fine-tuning.
               In this machine learning-focused workflow that is centered around models and scalable training, traditional robotics software frameworks become a bottleneck, while robot simulations offer only limited support for transitioning from and to real-world experiments.
@@ -195,106 +189,158 @@
               Our contribution is twofold: First, we introduce the architecture of RCS and explain its design principles.
               Second, we evaluate its usability and performance along the development cycle of VLA and RL policies.
               Our experiments also provide an extensive evaluation of Octo, OpenVLA, and Pi Zero on multiple robots and shed light on how simulation data can improve real-world policy performance.
-            </p>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-  <!-- End paper abstract -->
-
-<!-- existing frameworks often dont combine the learning part with the robot part or are hard to setup -->
-
-<!-- Arch -->
-  <section class="section hero is-small">
-    <div class="container is-max-desktop">
-      <div class="columns is-centered has-text-centered">
-        <div class="column">
-          <div class="hero-body">
-            <h2 class="title is-3">Architecture</h2>
-            <img src="static/images/rcs_architecture_small.svg" alt="RCS Architecture."
-              width="100%">
-            <div class="content has-text-justified">
-              Fig. 1: The applications on the left side interface with the environment on the right side, which can be a simulation or a real robot, through the Gymnasium interface. Sensors, actuators, and data observers wrap the environment by mutating the action, and/or the observation space.<br>
+              </p>
             </div>
           </div>
         </div>
       </div>
-    </div>
-  </section>
-<!-- End Arch -->
+    </section>
+    <!-- End paper abstract -->
 
-  <!-- TODO: explain architecture -->
+    <section class="section hero is-small">
+      <div class="container is-max-desktop">
+        <div class="columns is-centered has-text-justified">
+          <div class="column">
+            <h2 class="title is-3">Traditional robotics are not deprecated</h2>
+            <div class="hero-body">
+              <p>
+              Traditional robotics is built around hardware, with many interacting parts and specialized AI modules.
+              With machine learning taking the lead, this flips: <em> robots are components of a machine learning pipeline</em>.
+              </p>
 
-  <!-- TODO: integrated hardware -->
+              <p>
+              Many libraries adopt a Python- and ML-first approach, but they often lack robust robotics features and hardware support.
+              But building an ML pipeline does not get you a working robot.
+              You need to debug on the hardware and in simulation, simplify tasks using working algorithms, and move back and forth between training and hardware.
+              </p>
 
-  <!-- TODO: show use cases -->
+              <p>
+              RCS addresses this by supporting the full development cycle of robot policies like VLAs, while remaining a light-weight, pip-installable package, with minimal depencies.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
 
-  <!-- TODO: explain results -->
+    <!-- Arch -->
+    <section class="section hero is-small">
+      <div class="container is-max-desktop">
+        <div class="columns is-centered has-text-justified">
+          <div class="column">
+            <h2 class="title is-3">Architecture</h2>
+            <div class="hero-body">
+              <p>
+              <b>C++/Python API</b>&nbsp;&nbsp;
+              We expose device APIs in C++ and generate Python bindings for them, resulting in a mirrored API in Python and C++.
+              A new device can be integrated into RCS either in C++ or in Python, ensuring broad hardware compatiblity.
+              </p>
+              <p>
+              <b>Composable scenes</b>&nbsp;&nbsp;
+              We use our own device APIs to build higher level abstractions.
+              The concept of gymnasium wrappers is used to enable scene creation via composition.
+              </p>
+              <p>
+              <b>Layered architecture</b>&nbsp;&nbsp;
+              Because we build upon a minimal low-level device API, you can quickly get up and running with new hardware: implement our interface, benefit from all the wrappers and apps higher up in the stack.
+              </p>
+            </div>
 
-<!-- Results -->
-  <section class="section hero is-small">
-    <div class="container is-max-desktop">
-      <div class="columns is-centered has-text-centered">
-        <div class="column">
-          <div class="hero-body">
-            <h2 class="title is-3">Results</h2>
-            <img src="static/images/bar_plots_combined.svg" alt="Success rate bar plots."
-              width="100%">
+
+            <img src="static/images/rcs_architecture_small.svg" alt="RCS Architecture."
+                                                                width="100%">
             <div class="content has-text-justified">
-              Fig. 2: Success rate plots of different VLA comparisons.
+              Fig. 1: The applications on the left side interface with the environment on the right side, which can be a simulation or a real robot, through the Gymnasium interface.
+              Sensors, actuators, and data observers wrap the environment by mutating the action, and/or the observation space.
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- End Arch -->
+
+    <!-- TODO: explain architecture -->
+
+    <!-- TODO: integrated hardware -->
+
+    <!-- TODO: show use cases -->
+
+    <!-- TODO: explain results -->
+
+    <!-- Results -->
+    <section class="section hero is-small">
+      <div class="container is-max-desktop">
+        <div class="columns is-centered has-text-justified">
+          <div class="column">
+            <div class="hero-body">
+              <h2 class="title is-3">Results</h2>
+              <p>
+              We evaluate the usability of RCS's hardware oriented features by integrating multiple setups with different robots, grippers, cameras and touch sensors.
+              In total, three robots, four end-effectors, two cameras and one tactile sensors are implemented, both in simulation and on physical hardware.
+              All can be teleoperated with multiple devices an be used to record data.
+              </p>
+
+              <p>
+              We also verify that RCS integrates cleanly in ML pipelines, both in the imitation learning and reinforcement learning settings.
+              Multiple VLAs are fine-tuned and deployed, and we solve a simple simulated pick up task.
+              </p>
+
+              <img src="static/images/bar_plots_combined.svg" alt="Success rate bar plots."
+                                                              width="100%">
+              <div class="content has-text-justified">
+                Fig. 2: Success rate plots of different VLA comparisons.
                 <i>Left:</i>
                 The Pi Zero model fine-tuned on four datasets from different setups.
                 Each fine-tuning dataset contains of less then 150 episodes and each model is evaluated on 50 rollouts.
                 <i>Center:</i> 
                 Different models fine-tuned on 143 episodes on our FR3 setup (real) with a down-sampled frequency of 5Hz and evaluated on the real-world setup and the replicated simulated scene on 30 real-world and 100 simulated rollouts.
-                <i>Bottom:</i>
+                <i>Right:</i>
                 Different data mixes of synthetic and real data evaluated on the real-world setup and the simulated scene on 30 real-world and 100 simulated rollouts.
                 The number denotes the amount of episodes from the respective domain used in the training mix.
-            </div>
-            <img src="static/images/success_rate_sim_real.svg" alt="Success rate plot over training checkpoints."
-              width="100%">
-            <div class="content has-text-justified">
-              Fig. 3: Evaluation success rates measured for each checkpoint throughout the training process in the real and replicated simulated domain. Each checkpoint is evaluated on 20 real and 100 simulated rollouts. Left: Trained on 143 episodes on our FR3 dataset. Right: Trained on a mix of 143 episodes from our FR3 dataset and 500 episodes from the scripted dataset of the replicated simulated domain.
+              </div>
+              <img src="static/images/success_rate_sim_real.svg" alt="Success rate plot over training checkpoints."
+                                                                 width="100%">
+              <div class="content has-text-justified">
+                Fig. 3: Evaluation success rates measured for each checkpoint throughout the training process in the real and replicated simulated domain. Each checkpoint is evaluated on 20 real and 100 simulated rollouts. Left: Trained on 143 episodes on our FR3 dataset. Right: Trained on a mix of 143 episodes from our FR3 dataset and 500 episodes from the scripted dataset of the replicated simulated domain.
+              </div>
             </div>
           </div>
         </div>
       </div>
-    </div>
-  </section>
-<!-- End Results -->
+    </section>
+    <!-- End Results -->
 
 
 
-  <!--BibTex citation -->
-  <section class="section" id="BibTeX">
-    <div class="container is-max-desktop content">
-      <h2 class="title">BibTeX</h2>
-      <pre><code>@misc{juelg2025robotcontrolstack,
+    <!--BibTex citation -->
+    <section class="section" id="BibTeX">
+      <div class="container is-max-desktop content">
+        <h2 class="title">BibTeX</h2>
+        <pre><code>@misc{juelg2025robotcontrolstack,
   title={{Robot Control Stack}: {A} Lean Ecosystem for Robot Learning at Scale}, 
   author={Tobias J{\"u}lg and Pierre Krack and Seongjin Bien and Yannik Blei and Khaled Gamal and Ken Nakahara and Johannes Hechtl and Roberto Calandra and Wolfram Burgard and Florian Walter},
   year={2025},
   howpublished = {\url{https://arxiv.org/abs/2509.14932}}
 }
-</code></pre>
-    </div>
-  </section>
-  <!--End BibTex citation -->
+        </code></pre>
+      </div>
+    </section>
+    <!--End BibTex citation -->
 
 
-  <footer class="footer">
-    <div class="container">
-      <div class="columns is-centered">
-        <div class="column is-8">
-          <div class="content has-text-centered">
-            Website template borrowed from <span class="dnerf"><a
-                href="https://github.com/nerfies/nerfies.github.io">Nerfies</a></span>.
+    <footer class="footer">
+      <div class="container">
+        <div class="columns is-centered">
+          <div class="column is-8">
+            <div class="content has-text-centered">
+              Website template borrowed from <span class="dnerf"><a
+                                                   href="https://github.com/nerfies/nerfies.github.io">Nerfies</a></span>.
+            </div>
           </div>
         </div>
       </div>
-    </div>
-  </footer>
+    </footer>
 
-</body>
+  </body>
 
 </html>
