@@ -11,8 +11,8 @@
   <meta property="og:url" content="https://robotcontrolstack.github.io/" />
   <!-- Path to banner image, should be in the path listed below. Optimal dimenssions are 1200X630-->
   <meta property="og:image" content="static/images/rcs_eye_candy_final.jpg" />
-  <meta property="og:image:width" content="1500"/>
-  <meta property="og:image:height" content="1500"/>
+  <meta property="og:image:width" content="1500" />
+  <meta property="og:image:height" content="1500" />
 
 
   <!-- <meta name="twitter:title" content="TWITTER BANNER TITLE META TAG">
@@ -53,7 +53,8 @@
         <div class="columns is-centered">
           <div class="column has-text-centered">
             <h1 class="title">
-              <img src="static/images/rcs_logo_line.svg" alt="Project Logo" style="height: 80px; vertical-align: middle;">
+              <img src="static/images/rcs_logo_line.svg" alt="Project Logo"
+                style="height: 80px; vertical-align: middle;">
               <br><br>A Lean Ecosystem for Robot Learning at Scale
             </h1>
             <div class="is-size-5 publication-authors">
@@ -164,232 +165,369 @@
 
   <!-- Teaser video-->
   <section class="hero teaser">
-  <div class="container is-max-desktop">
-    <div class="hero-body">
-      <video id="tree" autoplay muted loop height="100%" preload="metadata">
-        <source src="static/videos/grid.mp4" type="video/mp4">
-      </video>
-      <h2 class="subtitle has-text-centered">
-        <!-- RCS: A lightweight layered architecture integrates core tools from robotics and exposes them through a Gymnasium-based API that enables seamless switching between simulation and real-world experiments.
+    <div class="container is-max-desktop">
+      <div class="hero-body">
+        <video id="tree" autoplay muted loop height="100%" preload="metadata">
+          <source src="static/videos/grid.mp4" type="video/mp4">
+        </video>
+        <h2 class="subtitle has-text-centered">
+          <!-- RCS: A lightweight layered architecture integrates core tools from robotics and exposes them through a Gymnasium-based API that enables seamless switching between simulation and real-world experiments.
         The individual layers can be easily customized in both Python and C++, making RCS equally suitable for end-to-end policy learning and low-level controller design. -->
-      </h2>
-    </div>
-  </div>
-  <!-- End teaser video -->
-
-  <!-- Paper abstract -->
-  <section class="section hero is-light">
-    <div class="container is-max-desktop">
-      <div class="columns is-centered has-text-centered">
-        <div class="column is-four-fifths">
-          <h2 class="title is-3">Abstract</h2>
-          <div class="content has-text-justified">
-            <p>
-              Vision-Language-Action models (VLAs) mark a major shift in robot learning.
-              They replace specialized architectures and task-tailored components of expert policies with large-scale data collection and setup-specific fine-tuning.
-              In this machine learning-focused workflow that is centered around models and scalable training, traditional robotics software frameworks become a bottleneck, while robot simulations offer only limited support for transitioning from and to real-world experiments.
-              In this work, we close this gap by introducing <i>Robot Control Stack</i> (RCS), a lean ecosystem designed from the ground up to support research in robot learning with large-scale generalist policies.
-              At its core, RCS features a modular and easily extensible layered architecture with a unified interface for simulated and physical robots, facilitating sim-to-real transfer.
-              Despite its minimal footprint and dependencies, it offers a complete feature set, enabling both real-world experiments and large-scale training in simulation.
-              Our contribution is twofold: First, we introduce the architecture of RCS and explain its design principles.
-              Second, we evaluate its usability and performance along the development cycle of VLA and RL policies.
-              Our experiments also provide an extensive evaluation of Octo, OpenVLA, and Pi Zero on multiple robots and shed light on how simulation data can improve real-world policy performance.
-            </p>
-          </div>
-        </div>
+        </h2>
       </div>
     </div>
-  </section>
-  <!-- End paper abstract -->
+    <!-- End teaser video -->
 
-<!-- 3-MIN VIDEO -->
-<section class="section" id="video-3min">
-  <div class="container is-max-desktop">
-    <h2 class="title is-3 has-text-centered">RCS in 3 Minutes</h2>
-    <div class="columns is-centered">
-      <div class="column is-10">
-        <div class="video-container" style="position:relative;padding-bottom:56.25%;height:0;overflow:hidden;border-radius:12px;box-shadow:0 10px 30px rgba(0,0,0,0.1)">
-          <!-- Replace source with your exported narration video -->
-          <video controls preload="metadata" style="position:absolute;top:0;left:0;width:100%;height:100%">
-            <source src="static/videos/rcs_3min_overview.mp4" type="video/mp4">
-          </video>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- existing frameworks often dont combine the learning part with the robot part or are hard to setup -->
-
-<!-- Arch -->
-  <section class="section hero is-small">
-    <div class="container is-max-desktop">
-      <div class="columns is-centered has-text-centered">
-        <div class="column">
-          <div class="hero-body">
-            <h2 class="title is-3">Architecture</h2>
-            <img src="static/images/rcs_architecture_small.svg" alt="RCS Architecture."
-              width="100%">
+    <!-- Paper abstract -->
+    <section class="section hero is-light">
+      <div class="container is-max-desktop">
+        <div class="columns is-centered has-text-centered">
+          <div class="column is-four-fifths">
+            <h2 class="title is-3">Abstract</h2>
             <div class="content has-text-justified">
-              Applications (teleoperation, RL, VLA) interface with the environment (sim or real) through a unified Gymnasium API. Sensors, actuators, and observers wrap the environment, mutating action/observation spaces.
+              <p>
+                Vision-Language-Action models (VLAs) mark a major shift in robot learning.
+                They replace specialized architectures and task-tailored components of expert policies with large-scale
+                data collection and setup-specific fine-tuning.
+                In this machine learning-focused workflow that is centered around models and scalable training,
+                traditional robotics software frameworks become a bottleneck, while robot simulations offer only limited
+                support for transitioning from and to real-world experiments.
+                In this work, we close this gap by introducing <i>Robot Control Stack</i> (RCS), a lean ecosystem
+                designed from the ground up to support research in robot learning with large-scale generalist policies.
+                At its core, RCS features a modular and easily extensible layered architecture with a unified interface
+                for simulated and physical robots, facilitating sim-to-real transfer.
+                Despite its minimal footprint and dependencies, it offers a complete feature set, enabling both
+                real-world experiments and large-scale training in simulation.
+                Our contribution is twofold: First, we introduce the architecture of RCS and explain its design
+                principles.
+                Second, we evaluate its usability and performance along the development cycle of VLA and RL policies.
+                Our experiments also provide an extensive evaluation of Octo, OpenVLA, and Pi Zero on multiple robots
+                and shed light on how simulation data can improve real-world policy performance.
+              </p>
             </div>
           </div>
         </div>
       </div>
-    </div>
-  </section>
-<!-- End Arch -->
+    </section>
+    <!-- End paper abstract -->
 
-  <!-- TODO: explain architecture -->
-
-
-
-<!-- Setups and twins -->
-<section class="section">
-  <div class="container is-max-desktop">
-    <h2 class="title is-3 has-text-centered">Robots Setups with Digital Twins</h2>
-
-    <style>
-      /* minimal CSS */
-      #setup-carousel { overflow: hidden; }              /* prevents peeking slides */
-      #setup-carousel .caption {                         /* move caption below dots */
-        margin-top: 0.5rem;
-        margin-bottom: 2.75rem; /* adjust if your dots are taller/shorter */
-      }
-    </style>
-    <div id="setup-carousel" class="carousel">
-      <div class="item-1 has-text-centered">
-        <div style="display:grid;grid-template-columns:1fr 1fr;gap:.5rem;align-items:start;justify-items:center;">
-          <img src="static/images/robots/fr3_setup.jpg" alt="FR3 physical setup" style="max-width:100%;height:auto;max-height:220px;border-radius:6px;">
-          <img src="static/images/robots/fr3_twin.png"  alt="FR3 digital twin"  style="max-width:100%;height:auto;max-height:220px;border-radius:6px;">
-        </div>
-        <p class="is-size-6 caption"><strong>FR3</strong> + Franka Hand; wrist &amp; side cameras.</p>
-      </div>
-
-      <div class="item-2 has-text-centered">
-        <div style="display:grid;grid-template-columns:1fr 1fr;gap:.5rem;align-items:start;justify-items:center;">
-          <img src="static/images/robots/xarm7_setup.jpg" alt="xArm7 physical setup" style="max-width:100%;height:auto;max-height:220px;border-radius:6px;">
-          <img src="static/images/robots/xarm7_twin.png"  alt="xArm7 digital twin"  style="max-width:100%;height:auto;max-height:220px;border-radius:6px;">
-        </div>
-        <p class="is-size-6 caption"><strong>xArm7</strong> + Tilburg Hand; side camera.</p>
-      </div>
-
-      <div class="item-3 has-text-centered">
-        <div style="display:grid;grid-template-columns:1fr 1fr;gap:.5rem;align-items:start;justify-items:center;">
-          <img src="static/images/robots/ur5e_setup.jpg" alt="UR5e physical setup" style="max-width:100%;height:auto;max-height:220px;border-radius:6px;">
-          <img src="static/images/robots/ur5e_twin.png"  alt="UR5e digital twin"  style="max-width:100%;height:auto;max-height:220px;border-radius:6px;">
-        </div>
-        <p class="is-size-6 caption"><strong>UR5e</strong> + Robotiq 2F-85; wrist &amp; overhead cameras.</p>
-      </div>
-
-      <div class="item-4 has-text-centered">
-        <div style="display:grid;grid-template-columns:1fr 1fr;gap:.5rem;align-items:start;justify-items:center;">
-          <img src="static/images/robots/so101_setup.jpg" alt="SO101 physical setup" style="max-width:100%;height:auto;max-height:220px;border-radius:6px;">
-          <img src="static/images/robots/so101_twin.png"  alt="SO101 digital twin"  style="max-width:100%;height:auto;max-height:220px;border-radius:6px;">
-        </div>
-        <p class="is-size-6 caption"><strong>SO101</strong> + built-in gripper; wrist &amp; side cameras.</p>
-      </div>
-    </div>
-  </div>
-</section>
-<!-- End setups and twins -->
-
-<!-- TODO: Applications -->
-  <section class="section hero is-small">
-    <div class="container is-max-desktop">
-      <div class="columns is-centered has-text-centered">
-        <div class="column">
-          <div class="hero-body">
-            <h2 class="title is-3">Applications</h2>
-            TODO: similar to app slide in video
+    <!-- 3-MIN VIDEO -->
+    <section class="section" id="video-3min">
+      <div class="container is-max-desktop">
+        <h2 class="title is-3 has-text-centered">RCS in 3 Minutes</h2>
+        <div class="columns is-centered">
+          <div class="column is-10">
+            <div class="video-container"
+              style="position:relative;padding-bottom:56.25%;height:0;overflow:hidden;border-radius:12px;box-shadow:0 10px 30px rgba(0,0,0,0.1)">
+              <!-- Replace source with your exported narration video -->
+              <video controls preload="metadata" style="position:absolute;top:0;left:0;width:100%;height:100%">
+                <source src="static/videos/rcs_3min_overview.mp4" type="video/mp4">
+              </video>
+            </div>
           </div>
         </div>
       </div>
-    </div>
-  </section>
-<!-- End Applications -->
+    </section>
+
+    <!-- existing frameworks often dont combine the learning part with the robot part or are hard to setup -->
+
+    <!-- Arch -->
+    <section class="section hero is-small">
+      <div class="container is-max-desktop">
+        <div class="columns is-centered has-text-centered">
+          <div class="column">
+            <div class="hero-body">
+              <h2 class="title is-3">Architecture</h2>
+              <img src="static/images/rcs_architecture_small.svg" alt="RCS Architecture." width="100%">
+              <div class="content has-text-justified">
+                Applications (teleoperation, RL, VLA) interface with the environment (sim or real) through a unified
+                Gymnasium API. Sensors, actuators, and observers wrap the environment, mutating action/observation
+                spaces.
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- End Arch -->
+
+    <!-- TODO: explain architecture -->
 
 
-<!-- Results -->
-  <section class="section hero is-small">
-    <div class="container is-max-desktop">
-      <div class="columns is-centered has-text-centered">
-        <div class="column">
-          <div class="hero-body">
-            <h2 class="title is-3">Results</h2>
-            <img src="static/images/results/bar_plots_combined.svg" alt="Success rate bar plots."
-              width="100%">
-            <div class="content has-text-justified">
-              Fig. 2: Success rate plots of different VLA comparisons.
+
+    <!-- Setups and twins -->
+    <section class="section">
+      <div class="container is-max-desktop">
+        <h2 class="title is-3 has-text-centered">Robots Setups with Digital Twins</h2>
+
+        <style>
+          /* minimal CSS */
+          #setup-carousel {
+            overflow: hidden;
+          }
+
+          /* prevents peeking slides */
+          #setup-carousel .caption {
+            /* move caption below dots */
+            margin-top: 0.5rem;
+            margin-bottom: 2.75rem;
+            /* adjust if your dots are taller/shorter */
+          }
+        </style>
+        <div id="setup-carousel" class="carousel">
+          <div class="item-1 has-text-centered">
+            <div style="display:grid;grid-template-columns:1fr 1fr;gap:.5rem;align-items:start;justify-items:center;">
+              <img src="static/images/robots/fr3_setup.jpg" alt="FR3 physical setup"
+                style="max-width:100%;height:auto;max-height:220px;border-radius:6px;">
+              <img src="static/images/robots/fr3_twin.png" alt="FR3 digital twin"
+                style="max-width:100%;height:auto;max-height:220px;border-radius:6px;">
+            </div>
+            <p class="is-size-6 caption"><strong>FR3</strong> + Franka Hand; wrist &amp; side cameras.</p>
+          </div>
+
+          <div class="item-2 has-text-centered">
+            <div style="display:grid;grid-template-columns:1fr 1fr;gap:.5rem;align-items:start;justify-items:center;">
+              <img src="static/images/robots/xarm7_setup.jpg" alt="xArm7 physical setup"
+                style="max-width:100%;height:auto;max-height:220px;border-radius:6px;">
+              <img src="static/images/robots/xarm7_twin.png" alt="xArm7 digital twin"
+                style="max-width:100%;height:auto;max-height:220px;border-radius:6px;">
+            </div>
+            <p class="is-size-6 caption"><strong>xArm7</strong> + Tilburg Hand; side camera.</p>
+          </div>
+
+          <div class="item-3 has-text-centered">
+            <div style="display:grid;grid-template-columns:1fr 1fr;gap:.5rem;align-items:start;justify-items:center;">
+              <img src="static/images/robots/ur5e_setup.jpg" alt="UR5e physical setup"
+                style="max-width:100%;height:auto;max-height:220px;border-radius:6px;">
+              <img src="static/images/robots/ur5e_twin.png" alt="UR5e digital twin"
+                style="max-width:100%;height:auto;max-height:220px;border-radius:6px;">
+            </div>
+            <p class="is-size-6 caption"><strong>UR5e</strong> + Robotiq 2F-85; wrist &amp; overhead cameras.</p>
+          </div>
+
+          <div class="item-4 has-text-centered">
+            <div style="display:grid;grid-template-columns:1fr 1fr;gap:.5rem;align-items:start;justify-items:center;">
+              <img src="static/images/robots/so101_setup.jpg" alt="SO101 physical setup"
+                style="max-width:100%;height:auto;max-height:220px;border-radius:6px;">
+              <img src="static/images/robots/so101_twin.png" alt="SO101 digital twin"
+                style="max-width:100%;height:auto;max-height:220px;border-radius:6px;">
+            </div>
+            <p class="is-size-6 caption"><strong>SO101</strong> + built-in gripper; wrist &amp; side cameras.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- End setups and twins -->
+
+    <!-- TODO: Applications -->
+    <section class="section hero is-small">
+      <div class="container is-max-desktop">
+        <div class="columns is-centered has-text-centered">
+          <div class="column">
+            <div class="hero-body">
+              <h2 class="title is-3">Applications</h2>
+              <br>
+
+              <hr>
+              <h3 class="title is-4">Teleoperation & Data Collection</h3>
+
+              <!-- First row: 3 videos -->
+              <div class="columns">
+                <div class="column">
+                  <h4 class="title is-5">HTC Vive</h4>
+                  <video autoplay muted loop preload="metadata" width="100%">
+                    <source src="static/videos/fr3_teleop.mp4" type="video/mp4">
+                  </video>
+                </div>
+                <div class="column">
+                  <h4 class="title is-5">Meta Quest 3</h4>
+                  <video autoplay muted loop preload="metadata" width="100%">
+                    <source src="static/videos/xarm7_teleop.mp4" type="video/mp4">
+                  </video>
+                </div>
+                <div class="column">
+                  <h4 class="title is-5">SpaceMouse</h4>
+                  <video autoplay muted loop preload="metadata" width="100%">
+                    <source src="static/videos/ur5e_spacemouse.mp4" type="video/mp4">
+                  </video>
+                </div>
+              </div>
+
+              <!-- Second row: 2 videos -->
+              <div class="columns is-centered">
+                <div class="column is-5">
+                  <h4 class="title is-5">Leader-Follower</h4>
+                  <video autoplay muted loop preload="metadata" width="75%">
+                    <source src="static/videos/so101_teleop.mp4" type="video/mp4">
+                  </video>
+                </div>
+                <div class="column is-5">
+                  <h4 class="title is-5">Scripted Data Collection</h4>
+                  <video autoplay muted loop preload="metadata" width="75%">
+                    <source src="static/videos/fr3_scripted.mp4" type="video/mp4">
+                  </video>
+                </div>
+              </div>
+              <br>
+              <hr>
+              <h3 class="title is-4">Reinforcement Learning</h3>
+              <!-- 2 videos -->
+              <div class="columns is-centered">
+                <div class="column is-5">
+                  <video autoplay muted loop preload="metadata" width="75%">
+                    <source src="static/videos/fr3_rl_graph.mp4" type="video/mp4">
+                  </video>
+                </div>
+                <div class="column is-5">
+                  <video autoplay muted loop preload="metadata" width="75%">
+                    <source src="static/videos/fr3_rl_robot.mp4" type="video/mp4">
+                  </video>
+                </div>
+              </div>
+
+              <br>
+              <hr>
+              <h3 class="title is-4">VLA Inferencing</h3>
+              <!-- 2 videos -->
+              <div class="columns is-centered">
+                <div class="column is-5">
+                  <h4 class="title is-5">Real</h4>
+                  <video autoplay muted loop preload="metadata" width="75%">
+                    <source src="static/videos/fr3_vla2.mp4" type="video/mp4">
+                  </video>
+                </div>
+                <div class="column is-5">
+                  <h4 class="title is-5">Simulation</h4>
+                  <video autoplay muted loop preload="metadata" width="75%">
+                    <source src="static/videos/fr3sim_vla.mp4" type="video/mp4">
+                  </video>
+                </div>
+              </div>
+
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- End Applications -->
+
+    <!-- Results -->
+    <section class="section hero is-small">
+      <div class="container is-max-desktop">
+        <div class="columns is-centered has-text-centered">
+          <div class="column">
+            <div class="hero-body">
+              <h2 class="title is-3">Results</h2>
+              <!-- Left column: Image -->
+              <div class="columns is-vcentered">
+              <div class="column is-half">
+                <figure class="image">
+                  <img src="static/images/results/robot_comparison.svg" alt="Descriptive alt text" width="90%">
+                </figure>
+              </div>
+
+              <!-- Right column: 2x2 grid of videos -->
+              <div class="column is-half">
+                <div class="columns is-multiline">
+                  <div class="column is-half">
+                    <video autoplay muted loop playsinline preload="metadata" width="100%">
+                      <source src="static/videos/fr3_vla.mp4" type="video/mp4">
+                    </video>
+                  </div>
+                  <div class="column is-half">
+                    <video autoplay muted loop playsinline preload="metadata" width="100%">
+                      <source src="static/videos/xarm7_vla.mp4" type="video/mp4">
+                    </video>
+                  </div>
+                  <div class="column is-half">
+                    <video autoplay muted loop playsinline preload="metadata" width="100%">
+                      <source src="static/videos/ur5e_vla.mp4" type="video/mp4">
+                    </video>
+                  </div>
+                  <div class="column is-half">
+                    <video autoplay muted loop playsinline preload="metadata" width="100%">
+                      <source src="static/videos/so101_vla.mp4" type="video/mp4">
+                    </video>
+                  </div>
+                </div>
+              </div>
+              </div>
+
+              <div class="content has-text-justified">
+                Fig. 2: Success rate plots of different VLA comparisons.
                 <i>Left:</i>
                 The Pi Zero model fine-tuned on four datasets from different setups.
                 Each fine-tuning dataset contains of less then 150 episodes and each model is evaluated on 50 rollouts.
-                <i>Center:</i> 
-                Different models fine-tuned on 143 episodes on our FR3 setup (real) with a down-sampled frequency of 5Hz and evaluated on the real-world setup and the replicated simulated scene on 30 real-world and 100 simulated rollouts.
+                <i>Center:</i>
+                Different models fine-tuned on 143 episodes on our FR3 setup (real) with a down-sampled frequency of 5Hz
+                and evaluated on the real-world setup and the replicated simulated scene on 30 real-world and 100
+                simulated rollouts.
                 <i>Bottom:</i>
-                Different data mixes of synthetic and real data evaluated on the real-world setup and the simulated scene on 30 real-world and 100 simulated rollouts.
+                Different data mixes of synthetic and real data evaluated on the real-world setup and the simulated
+                scene on 30 real-world and 100 simulated rollouts.
                 The number denotes the amount of episodes from the respective domain used in the training mix.
-            </div>
-            <img src="static/images/results/success_rate_sim_real.svg" alt="Success rate plot over training checkpoints."
-              width="100%">
-            <div class="content has-text-justified">
-              Fig. 3: Evaluation success rates measured for each checkpoint throughout the training process in the real and replicated simulated domain. Each checkpoint is evaluated on 20 real and 100 simulated rollouts. Left: Trained on 143 episodes on our FR3 dataset. Right: Trained on a mix of 143 episodes from our FR3 dataset and 500 episodes from the scripted dataset of the replicated simulated domain.
+              </div>
+              <img src="static/images/results/sim_real_eval.svg"
+                alt="Success rate plot over training checkpoints." width="100%">
+              <div class="content has-text-justified">
+                Fig. 3: Evaluation success rates measured for each checkpoint throughout the training process in the
+                real and replicated simulated domain. Each checkpoint is evaluated on 20 real and 100 simulated
+                rollouts. Left: Trained on 143 episodes on our FR3 dataset. Right: Trained on a mix of 143 episodes from
+                our FR3 dataset and 500 episodes from the scripted dataset of the replicated simulated domain.
+              </div>
             </div>
           </div>
         </div>
       </div>
-    </div>
-  </section>
-<!-- TODO: explain results -->
-<!-- End Results -->
+    </section>
+    <!-- TODO: explain results -->
+    <!-- End Results -->
 
 
 
-  <!--BibTex citation -->
-  <section class="section" id="BibTeX">
-    <div class="container is-max-desktop content">
-      <h2 class="title">BibTeX</h2>
-      <pre><code>@misc{juelg2025robotcontrolstack,
+    <!--BibTex citation -->
+    <section class="section" id="BibTeX">
+      <div class="container is-max-desktop content">
+        <h2 class="title">BibTeX</h2>
+        <pre><code>@misc{juelg2025robotcontrolstack,
   title={{Robot Control Stack}: {A} Lean Ecosystem for Robot Learning at Scale}, 
   author={Tobias J{\"u}lg and Pierre Krack and Seongjin Bien and Yannik Blei and Khaled Gamal and Ken Nakahara and Johannes Hechtl and Roberto Calandra and Wolfram Burgard and Florian Walter},
   year={2025},
   howpublished = {\url{https://arxiv.org/abs/2509.14932}}
 }
 </code></pre>
-    </div>
-  </section>
-  <!--End BibTex citation -->
+      </div>
+    </section>
+    <!--End BibTex citation -->
 
 
-  <footer class="footer">
-    <div class="container">
-      <div class="columns is-centered">
-        <div class="column is-8">
-          <div class="content has-text-centered">
-            Website template borrowed from <span class="dnerf"><a
-                href="https://github.com/nerfies/nerfies.github.io">Nerfies</a></span>.
+    <footer class="footer">
+      <div class="container">
+        <div class="columns is-centered">
+          <div class="column is-8">
+            <div class="content has-text-centered">
+              Website template borrowed from <span class="dnerf"><a
+                  href="https://github.com/nerfies/nerfies.github.io">Nerfies</a></span>.
+            </div>
           </div>
         </div>
       </div>
-    </div>
-  </footer>
+    </footer>
 
-<!-- Default Statcounter code for Robot Control Stack https://robotcontrolstack.github.io/ -->
-<script type="text/javascript">
-var sc_project=13169805; 
-var sc_invisible=1; 
-var sc_security="64083f10"; 
-</script>
-<script type="text/javascript"
-src="https://www.statcounter.com/counter/counter.js"
-async></script>
-<noscript><div class="statcounter"><a title="free hit
-counter" href="https://statcounter.com/"
-target="_blank"><img class="statcounter"
-src="https://c.statcounter.com/13169805/0/64083f10/1/"
-alt="free hit counter"
-referrerPolicy="no-referrer-when-downgrade"></a></div></noscript>
-<!-- End of Statcounter Code -->
+    <!-- Default Statcounter code for Robot Control Stack https://robotcontrolstack.github.io/ -->
+    <script type="text/javascript">
+      var sc_project = 13169805;
+      var sc_invisible = 1;
+      var sc_security = "64083f10"; 
+    </script>
+    <script type="text/javascript" src="https://www.statcounter.com/counter/counter.js" async></script>
+    <noscript>
+      <div class="statcounter"><a title="free hit
+counter" href="https://statcounter.com/" target="_blank"><img class="statcounter"
+            src="https://c.statcounter.com/13169805/0/64083f10/1/" alt="free hit counter"
+            referrerPolicy="no-referrer-when-downgrade"></a></div>
+    </noscript>
+    <!-- End of Statcounter Code -->
 
 </body>
 
