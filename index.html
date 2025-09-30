@@ -3,13 +3,13 @@
 
 <head>
   <meta charset="utf-8">
-  <!-- Meta tags for social media banners, these should be filled in appropriatly as they are your "business card" -->
+  <!-- Meta tags for social media banners, these should be filled in appropriately as they are your "business card" -->
   <!-- Replace the content tag with appropriate information -->
   <meta name="description" content="A Lean Ecosystem for Robot Learning at Scale">
   <meta property="og:title" content="Robot Control Stack: A Lean Ecosystem for Robot Learning at Scale" />
   <meta property="og:description" content="A Lean Ecosystem for Robot Learning at Scale" />
   <meta property="og:url" content="https://robotcontrolstack.github.io/" />
-  <!-- Path to banner image, should be in the path listed below. Optimal dimenssions are 1200X630-->
+  <!-- Path to banner image, should be in the path listed below. Optimal dimensions are 1200X630-->
   <meta property="og:image" content="static/images/rcs_eye_candy_final.jpg" />
   <meta property="og:image:width" content="1500" />
   <meta property="og:image:height" content="1500" />
@@ -17,7 +17,7 @@
 
   <!-- <meta name="twitter:title" content="TWITTER BANNER TITLE META TAG">
   <meta name="twitter:description" content="TWITTER BANNER DESCRIPTION META TAG"> -->
-  <!-- Path to banner image, should be in the path listed below. Optimal dimenssions are 1200X600-->
+  <!-- Path to banner image, should be in the path listed below. Optimal dimensions are 1200X600-->
   <!-- <meta name="twitter:image" content="static/images/your_twitter_banner_image.png">
   <meta name="twitter:card" content="summary_large_image"> -->
   <!-- Keywords for your paper to be indexed by-->
@@ -202,7 +202,7 @@
                 principles.
                 Second, we evaluate its usability and performance along the development cycle of VLA and RL policies.
                 Our experiments also provide an extensive evaluation of Octo, OpenVLA, and Pi Zero on multiple robots
-                and shed light on how simulation data can improve real-world policy performance.
+                and shed light on the benefits of simulated data for robotic foundation models.
               </p>
             </div>
           </div>
@@ -224,6 +224,23 @@
                 <source src="static/videos/rcs_3min_overview.mp4" type="video/mp4">
               </video>
             </div>
+            <br>
+              <p>
+              Traditional robotics is built around hardware, with many interacting parts and specialized AI modules.
+              With machine learning taking the lead, this relationship flips around: <em> robots are components of a machine learning pipeline</em>.
+              </p>
+
+              <br>
+              <p>
+              Many libraries embrace this and adopt a Python- and ML-first approach, but they often lack robust robotics features and hardware support.
+              Robust policies require careful debugging in both simulation and hardware, which relies on classical robotics tools.
+              </p>
+
+              <br>
+              <p>
+              RCS bridges this gap by combining an ML-first design with the essential robotics tools.
+              It gives you the means to debug interfaces, validate tasks, and test directly on hardware&mdash;while remaining a lightweight pip-installable package with minimal dependencies.
+              </p>
           </div>
         </div>
       </div>
@@ -236,11 +253,28 @@
       <div class="container is-max-desktop">
         <div class="columns is-centered has-text-centered">
           <div class="column">
-            <div class="hero-body">
-              <h2 class="title is-3">Architecture</h2>
+            <div class="hero-body has-text-justified">
+              <h2 class="title is-3 has-text-centered">Architecture</h2>
+              <p>
+              <b>C++/Python API</b>&nbsp;&nbsp;
+              We provide device APIs in C++ with automatically generated Python bindings, ensuring mirrored functionality in both languages.
+              A new device can be integrated into RCS in either C++ or in Python, ensuring broad hardware compatibility.
+              </p>
+              <br>
+              <p>
+              <b>Composable scenes</b>&nbsp;&nbsp;
+              Higher-level abstractions are built on top of our own device APIs.
+              They leverage Gymnasium wrappers to enable modular scene creation through composition.
+              </p>
+              <br>
+              <p>
+              <b>Layered architecture</b>&nbsp;&nbsp;
+              Because we build upon a minimal low-level device API, you can quickly get up and running with new hardware: implement our interface, benefit from all the wrappers and apps higher up in the stack.
+              </p>
+              <br>
               <img src="static/images/rcs_architecture_small.svg" alt="RCS Architecture." width="100%">
               <div class="content has-text-justified">
-                Applications (teleoperation, RL, VLA) interface with the environment (sim or real) through a unified
+                Fig. 1: Applications (teleoperation, RL, VLA) interface with the environment (sim or real) through a unified
                 Gymnasium API. Sensors, actuators, and observers wrap the environment, mutating action/observation
                 spaces.
               </div>
@@ -258,7 +292,12 @@
     <!-- Setups and twins -->
     <section class="section">
       <div class="container is-max-desktop">
-        <h2 class="title is-3 has-text-centered">Robots Setups with Digital Twins</h2>
+        <h2 class="title is-3 has-text-centered">Robot Setups with Digital Twins</h2>
+              <p>
+              We evaluate the usability of RCS's hardware oriented features by integrating multiple setups with different robots, grippers, cameras and touch sensors.
+              In total, four robots, four end-effectors, two cameras and a tactile sensor are implemented, both in simulation and on physical hardware.
+              </p>
+              <br>
 
         <style>
           /* minimal CSS */
@@ -322,14 +361,21 @@
     <!-- TODO: Applications -->
     <section class="section hero is-small">
       <div class="container is-max-desktop">
-        <div class="columns is-centered has-text-centered">
+        <div class="columns is-centered has-text-justified">
           <div class="column">
             <div class="hero-body">
-              <h2 class="title is-3">Applications</h2>
+              <h2 class="title is-3 has-text-centered">Applications</h2>
+              <br>
+              <p>
+              All implemented robots can be teleoperated with multiple devices and can be used to record data.
+              We also verify that RCS integrates cleanly into ML pipelines, both in the imitation learning and reinforcement learning settings.
+              We deploy multiple VLAs, and solve a simple simulated pick-up task with PPO, using proprioceptive and RGB states as observations.
+              </p>
+              <br>
               <br>
 
               <hr>
-              <h3 class="title is-4">Teleoperation & Data Collection</h3>
+              <h3 class="title is-4 has-text-centered">Teleoperation & Data Collection</h3>
 
               <!-- First row: 3 videos -->
               <div class="columns">
@@ -370,7 +416,7 @@
               </div>
               <br>
               <hr>
-              <h3 class="title is-4">Reinforcement Learning</h3>
+              <h3 class="title is-4 has-text-centered">Reinforcement Learning</h3>
               <!-- 2 videos -->
               <div class="columns is-centered">
                 <div class="column is-5">
@@ -387,7 +433,7 @@
 
               <br>
               <hr>
-              <h3 class="title is-4">VLA Inferencing</h3>
+              <h3 class="title is-4 has-text-centered">VLA Inference</h3>
               <!-- 2 videos -->
               <div class="columns is-centered">
                 <div class="column is-5">
@@ -416,8 +462,11 @@
       <div class="container is-max-desktop">
         <div class="columns is-centered has-text-centered">
           <div class="column">
-            <div class="hero-body">
-              <h2 class="title is-3">Results</h2>
+            <div class="hero-body has-text-justified">
+              <h2 class="title is-3 has-text-centered">Results</h2>
+              <p>We demonstrate how RCS supports VLA research by investigating VLA generalization across multiple embodiments and assessing the benefit of simulated data for robotic foundation models.
+              </p>
+              <br>
               <!-- Left column: Image -->
               <div class="columns is-vcentered">
               <div class="column is-half">
@@ -454,26 +503,19 @@
               </div>
 
               <div class="content has-text-justified">
-                Fig. 2: Success rate plots of different VLA comparisons.
-                <i>Left:</i>
-                The Pi Zero model fine-tuned on four datasets from different setups.
-                Each fine-tuning dataset contains of less then 150 episodes and each model is evaluated on 50 rollouts.
-                <i>Center:</i>
-                Different models fine-tuned on 143 episodes on our FR3 setup (real) with a down-sampled frequency of 5Hz
-                and evaluated on the real-world setup and the replicated simulated scene on 30 real-world and 100
-                simulated rollouts.
-                <i>Bottom:</i>
-                Different data mixes of synthetic and real data evaluated on the real-world setup and the simulated
-                scene on 30 real-world and 100 simulated rollouts.
-                The number denotes the amount of episodes from the respective domain used in the training mix.
+                  Fig. 2: We fine-tune Pi Zero on four datasets from different setups.
+                  Each dataset contains fewer than 150 episodes.
+                  The fine-tuned models are deployed on the corresponding setups.
+                  The robots that are more prominent in the base model's data mix achieve better results.
               </div>
               <img src="static/images/results/sim_real_eval.svg"
                 alt="Success rate plot over training checkpoints." width="100%">
               <div class="content has-text-justified">
-                Fig. 3: Evaluation success rates measured for each checkpoint throughout the training process in the
-                real and replicated simulated domain. Each checkpoint is evaluated on 20 real and 100 simulated
-                rollouts. Left: Trained on 143 episodes on our FR3 dataset. Right: Trained on a mix of 143 episodes from
-                our FR3 dataset and 500 episodes from the scripted dataset of the replicated simulated domain.
+                Fig. 3: We investigate the impact of simulated data on VLA performance.
+                Our setup is replicated in simulation and used to generate 500 trajectories using a scripted policy, which is then used to complement our manually collected dataset of 143 trajectories.
+                The plots show the success rate of the policy, both in the simulated scene and on the hardware, as training progresses.
+                Success rates in simulation correlate with success rates on the physical robot—consistent with a good evaluation metric.
+                Adding simulated data to the training mix improves performance in both settings.
               </div>
             </div>
           </div>
