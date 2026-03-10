@@ -3,24 +3,15 @@
 
 <head>
   <meta charset="utf-8">
-  <!-- Meta tags for social media banners, these should be filled in appropriately as they are your "business card" -->
-  <!-- Replace the content tag with appropriate information -->
-  <meta name="description" content="A Lean Ecosystem for Robot Learning at Scale">
+  <meta name="description" content="A lean, ROS-free sim-to-real framework for training and deploying Vision-Language-Action (VLA) models and RL agents. Native MuJoCo Gymnasium wrappers with synchronous execution for Franka, UR5e, xArm, and SO101.">
   <meta property="og:title" content="Robot Control Stack: A Lean Ecosystem for Robot Learning at Scale" />
   <meta property="og:description" content="A Lean Ecosystem for Robot Learning at Scale" />
   <meta property="og:url" content="https://robotcontrolstack.github.io/" />
-  <!-- Path to banner image, should be in the path listed below. Optimal dimensions are 1200X630-->
   <meta property="og:image" content="static/images/rcs_eye_candy_final.jpg" />
   <meta property="og:image:width" content="1500" />
   <meta property="og:image:height" content="1500" />
 
 
-  <!-- <meta name="twitter:title" content="TWITTER BANNER TITLE META TAG">
-  <meta name="twitter:description" content="TWITTER BANNER DESCRIPTION META TAG"> -->
-  <!-- Path to banner image, should be in the path listed below. Optimal dimensions are 1200X600-->
-  <!-- <meta name="twitter:image" content="static/images/your_twitter_banner_image.png">
-  <meta name="twitter:card" content="summary_large_image"> -->
-  <!-- Keywords for your paper to be indexed by-->
   <meta name="keywords" content="RCS">
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
@@ -58,7 +49,6 @@
               <br><br>A Lean Ecosystem for Robot Learning at Scale
             </h1>
             <div class="is-size-5 publication-authors">
-              <!-- Paper authors -->
               <span class="author-block">
                 Tobias Jülg<sup>*1</sup>,</span>
               <span class="author-block">
@@ -91,7 +81,6 @@
 
             <div class="column has-text-centered">
               <div class="publication-links">
-                <!-- ArXiv abstract Link -->
                 <span class="link-block">
                   <a href="https://arxiv.org/abs/2509.14932" target="_blank"
                     class="external-link button is-normal is-rounded is-dark">
@@ -101,7 +90,6 @@
                     <span>arXiv</span>
                   </a>
                 </span>
-                <!-- Arxiv PDF link -->
                 <span class="link-block">
                   <a href="https://arxiv.org/pdf/2509.14932" target="_blank"
                     class="external-link button is-normal is-rounded is-dark">
@@ -113,18 +101,6 @@
                 </span>
 
 
-                <!-- Supplementary PDF link -->
-                <!-- <span class="link-block">
-                  <a href="static/pdfs/supplementary_material.pdf" target="_blank"
-                    class="external-link button is-normal is-rounded is-dark">
-                    <span class="icon">
-                      <i class="fas fa-file-pdf"></i>
-                    </span>
-                    <span>Supplementary</span>
-                  </a>
-                </span> -->
-
-                <!-- Github link -->
                 <span class="link-block">
                   <a href="https://github.com/RobotControlStack/robot-control-stack" target="_blank"
                     class="external-link button is-normal is-rounded is-dark">
@@ -134,7 +110,6 @@
                     <span>Code</span>
                   </a>
                 </span>
-                <!-- Doc link -->
                 <span class="link-block">
                   <a href="https://robotcontrolstack.org" target="_blank"
                     class="external-link button is-normal is-rounded is-dark">
@@ -144,7 +119,6 @@
                     <span>Docs</span>
                   </a>
                 </span>
-                <!-- Model Link. -->
                 <span class="link-block">
                   <a href="https://huggingface.co/RobotControlStack"
                     class="external-link button is-normal is-rounded is-dark">
@@ -163,7 +137,6 @@
   </section>
 
 
-  <!-- Teaser video-->
   <section class="hero teaser">
     <div class="container is-max-desktop">
       <div class="hero-body">
@@ -171,14 +144,9 @@
           <source src="static/videos/grid.mp4" type="video/mp4">
         </video>
         <h2 class="subtitle has-text-centered">
-          <!-- RCS: A lightweight layered architecture integrates core tools from robotics and exposes them through a Gymnasium-based API that enables seamless switching between simulation and real-world experiments.
-        The individual layers can be easily customized in both Python and C++, making RCS equally suitable for end-to-end policy learning and low-level controller design. -->
-        </h2>
+          </h2>
       </div>
     </div>
-    <!-- End teaser video -->
-
-    <!-- Paper abstract -->
     <section class="section hero is-light">
       <div class="container is-max-desktop">
         <div class="columns is-centered has-text-centered">
@@ -209,9 +177,6 @@
         </div>
       </div>
     </section>
-    <!-- End paper abstract -->
-
-    <!-- 3-MIN VIDEO -->
     <section class="section" id="video-3min">
       <div class="container is-max-desktop">
         <h2 class="title is-3 has-text-centered">RCS in 3 Minutes</h2>
@@ -219,7 +184,6 @@
           <div class="column is-10">
             <div class="video-container"
               style="position:relative;padding-bottom:56.25%;height:0;overflow:hidden;border-radius:12px;box-shadow:0 10px 30px rgba(0,0,0,0.1)">
-              <!-- Replace source with your exported narration video -->
               <video controls preload="metadata" style="position:absolute;top:0;left:0;width:100%;height:100%">
                 <source src="static/videos/rcs_3min_overview.mp4" type="video/mp4">
               </video>
@@ -246,9 +210,6 @@
       </div>
     </section>
 
-    <!-- existing frameworks often dont combine the learning part with the robot part or are hard to setup -->
-
-    <!-- Arch -->
     <section class="section hero is-small">
       <div class="container is-max-desktop">
         <div class="columns is-centered has-text-centered">
@@ -283,13 +244,6 @@
         </div>
       </div>
     </section>
-    <!-- End Arch -->
-
-    <!-- TODO: explain architecture -->
-
-
-
-    <!-- Setups and twins -->
     <section class="section">
       <div class="container is-max-desktop">
         <h2 class="title is-3 has-text-centered">Robot Setups with Digital Twins</h2>
@@ -356,9 +310,6 @@
         </div>
       </div>
     </section>
-    <!-- End setups and twins -->
-
-    <!-- TODO: Applications -->
     <section class="section hero is-small">
       <div class="container is-max-desktop">
         <div class="columns is-centered has-text-justified">
@@ -377,7 +328,6 @@
               <hr>
               <h3 class="title is-4 has-text-centered">Teleoperation & Data Collection</h3>
 
-              <!-- First row: 3 videos -->
               <div class="columns">
                 <div class="column">
                   <h4 class="title is-5">HTC Vive</h4>
@@ -399,7 +349,6 @@
                 </div>
               </div>
 
-              <!-- Second row: 2 videos -->
               <div class="columns is-centered">
                 <div class="column is-5">
                   <h4 class="title is-5">Leader-Follower</h4>
@@ -417,7 +366,6 @@
               <br>
               <hr>
               <h3 class="title is-4 has-text-centered">Reinforcement Learning</h3>
-              <!-- 2 videos -->
               <div class="columns is-centered">
                 <div class="column is-5">
                   <video autoplay muted loop preload="metadata" width="75%">
@@ -434,7 +382,6 @@
               <br>
               <hr>
               <h3 class="title is-4 has-text-centered">VLA Inference</h3>
-              <!-- 2 videos -->
               <div class="columns is-centered">
                 <div class="column is-5">
                   <h4 class="title is-5">Real</h4>
@@ -455,9 +402,6 @@
         </div>
       </div>
     </section>
-    <!-- End Applications -->
-
-    <!-- Results -->
     <section class="section hero is-small">
       <div class="container is-max-desktop">
         <div class="columns is-centered has-text-centered">
@@ -467,7 +411,6 @@
               <p>We demonstrate how RCS supports VLA research by investigating VLA generalization across multiple embodiments and assessing the benefit of simulated data for robotic foundation models.
               </p>
               <br>
-              <!-- Left column: Image -->
               <div class="columns is-vcentered">
               <div class="column is-half">
                 <figure class="image">
@@ -475,7 +418,6 @@
                 </figure>
               </div>
 
-              <!-- Right column: 2x2 grid of videos -->
               <div class="column is-half">
                 <div class="columns is-multiline">
                   <div class="column is-half">
@@ -517,17 +459,25 @@
                 Success rates in simulation correlate with success rates on the physical robot—consistent with a good evaluation metric.
                 Adding simulated data to the training mix improves performance in both settings.
               </div>
+              
+              <br>
+              <hr>
+              
+              <h3 class="title is-4 has-text-centered">System Performance</h3>
+              <p>
+                To support modern, high-frequency VLA architectures (like &pi;<sub>0</sub>), RCS must process data efficiently. We evaluated the recording frequencies across multiple camera and tactile sensor configurations. RCS scales reliably up to 90-120 Hz before encountering hardware IO bottlenecks, proving its suitability for high-frequency RL and VLA deployments despite the synchronous nature of Gymnasium environments.
+              </p>
+              <br>
+              <img src="static/images/system_performance.svg" alt="Configured control vs. measured data frequency during teleoperation" width="100%">
+              <div class="content has-text-justified">
+                Fig. 4: Configured control vs. measured data frequency during teleoperation, averaged over more than 1000 steps. The shaded area denotes the standard deviation. <em>FR3 2 Cams</em>: Two RealSense cameras. <em>FR3 4+2 Cams</em>: Four RealSense cameras and two DIGIT sensors. <em>Dual FR3 4+2 Cams</em>: Like <em>FR3 4+2 Cam</em> but with two FR3 robots.
+              </div>
+
             </div>
           </div>
         </div>
       </div>
     </section>
-    <!-- TODO: explain results -->
-    <!-- End Results -->
-
-
-
-    <!--BibTex citation -->
     <section class="section" id="BibTeX">
       <div class="container is-max-desktop content">
         <h2 class="title">BibTeX</h2>
@@ -541,9 +491,6 @@
 </code></pre>
       </div>
     </section>
-    <!--End BibTex citation -->
-
-
     <footer class="footer">
       <div class="container">
         <div class="columns is-centered">
@@ -557,7 +504,6 @@
       </div>
     </footer>
 
-    <!-- Default Statcounter code for Robot Control Stack https://robotcontrolstack.github.io/ -->
     <script type="text/javascript">
       var sc_project = 13169805;
       var sc_invisible = 1;
@@ -570,8 +516,6 @@ counter" href="https://statcounter.com/" target="_blank"><img class="statcounter
             src="https://c.statcounter.com/13169805/0/64083f10/1/" alt="free hit counter"
             referrerPolicy="no-referrer-when-downgrade"></a></div>
     </noscript>
-    <!-- End of Statcounter Code -->
-
-</body>
+    </body>
 
 </html>
